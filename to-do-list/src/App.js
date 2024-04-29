@@ -1,9 +1,9 @@
-
+import Landing from './Components/landing.jsx';
 import './App.css';
 
 function App() {
   return (
-   <h1>Hello world</h1>
+   <Landing/>
   );
 }
 
