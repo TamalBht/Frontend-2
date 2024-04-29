@@ -1,3 +1,7 @@
+@font-face {
+    font-family: oswald;
+    src: url(./Oswald-VariableFont_wght.ttf);
+}
 .landing-wrapper{
     background: linear-gradient(#d8d8d8 50%,#d7d2d2);
     width:100vw;
@@ -22,4 +26,8 @@
 }
 .quote{
     color: #fdfdfd;
+    font-family: oswald;
+    font-size: 35px;
+    text-align: center;
+    width: 100%;
 }

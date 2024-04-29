@@ -5,7 +5,7 @@ function Landing(){
         <div className="landing-wrapper">
             <div className="lan-subwrapper">
                 <p className="quote">
-                “Productivity is being able to do things that you were never able to do before.” –Franz Kafka
+                “Productivity is being able to do things that you were never able to do before.” <br/>-Franz Kafka
                 </p>
             </div>
         </div>
