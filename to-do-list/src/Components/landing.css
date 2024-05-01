@@ -29,11 +29,12 @@
 .quote{
     color: #fdfdfd;
     font-family: oswald;
-    font-size: 35px;
+    font-size: 85px;
     text-align: center;
     width: 100%;
     position: relative;
     top:32%;
+    font-weight: 900;
 }
 a{
     color: #fdfdfd;
