@@ -12,7 +12,7 @@ function Landing(){
                 <p className="quote">
                    <Typewriter
                    options={{
-                    strings: ['Productive',"Creative","Efficiency","Focus"],
+                    strings: ['Be Productive'," Be Creative","Be Efficient","Stay Focused"],
                     autoStart: true,
                     loop:true
                    }} />
