@@ -1,6 +1,13 @@
+import React from "react";
+import "./main.css"
+import { useState } from "react";
 function Main(){
     return(
-        <h1>Home page</h1>
+        <div className="main-wrapper">
+            <div className="main-subwrapper">
+                
+            </div>
+        </div>
     )
 }
 export default Main;
