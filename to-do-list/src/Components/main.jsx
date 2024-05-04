@@ -23,10 +23,18 @@ function Main(){
         
         
         index=index+1;
+        e.target.reset();
+        
         
         
 
     };
+    function Addtask(valuee){
+    
+        return(
+            <div className="toDoInput">{valuee}</div>
+        );
+    }
 
     return(
         <div className="main-wrapper">
@@ -35,10 +43,13 @@ function Main(){
                     <input type="text" placeholder="Enter your task" onChange={handleInput}></input>
                     <button type="submit">Add</button>
                 </form>
-                <div id="task-list">
-                    {todo.map((inpValue,index)=>( <Addd key={index} valuee={inpValue}/>
+                <ul>
+                    {todo.map((inpValue,index)=>(
+                        <li key={index}>
+                            <span>{inpValue}</span>
+                        </li>
                     ))}
-                </div>
+                </ul>
             </div>
         </div>
     )
