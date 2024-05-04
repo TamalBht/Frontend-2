@@ -13,7 +13,7 @@ function Main(){
     };
     const handleSubmit=(e)=>{
         e.preventDefault();
-        setTodo([...todo,]);
+        setTodo([...todo,<Addd valuee={inpValue}/>]);
         
         
 
