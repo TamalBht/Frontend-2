@@ -15,19 +15,11 @@ function Main(){
     const handleSubmit=(e)=>{
         e.preventDefault();
         console.log(inpValue);
-
-        setTodo([...todo,inpValue]);
-        
-        
+        setTodo([...todo,inpValue]); 
         console.log(todo);
-        
-        
         index=index+1;
         e.target.reset();
-        
-        
-        
-
+     
     };
     function Addtask(valuee){
     
