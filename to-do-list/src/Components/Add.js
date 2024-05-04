@@ -1,6 +1,6 @@
-function Addd(value){
+function Addd(valuee){
     return(
-        <div className="toDoInput">{value}</div>
+        <div className="toDoInput">{valuee}</div>
     );
 }
 export default Addd;
