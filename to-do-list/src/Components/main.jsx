@@ -32,13 +32,13 @@ function Main(){
         <div className="main-wrapper">
             <div className="main-subwrapper">
                 <form  onSubmit={handleSubmit}>
-                    <input type="text" placeholder="Enter your task" onChange={handleInput}></input>
+                    <input type="text" placeholder="Enter your task" onChange={handleInput}required></input>
                     <button type="submit">Add</button>
                 </form>
                 <ul>
                     {todo.map((inpValue,index)=>(
                         <li key={index}>
-                            <span>{inpValue}</span>
+                            <button></button><span>{inpValue}</span>
                         </li>
                     ))}
                 </ul>
