@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Roboto;
+  src: url(./RobotoSlab-VariableFont_wght.ttf);
+}
+
 .main-wrapper{
     min-width:100vw;
     min-height:100vh;
@@ -28,4 +33,41 @@
 }
 .toDoInput{
   height:10px;
+}
+form{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+form input{
+  height:30px;
+  width:40%;
+  border-radius: 10px;
+  background: transparent;
+  
+  box-shadow: 3px 3px 3px #a6a6a6;
+  border: none;
+  border-left: 3px solid #ffffff;
+  border-top: 3px solid #ffffff;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+
+
+}
+form button{
+  height:34px;
+  width:20%;
+  margin-left: 10px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px #a6a6a6;
+  border: none;
+  border-left: 3px solid #ffffff;
+  border-top: 3px solid #ffffff;
+  font-family: Oswald;
+}
+::placeholder{
+  color:rgb(18, 17, 17);
 }
