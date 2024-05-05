@@ -2,6 +2,8 @@ import React from "react";
 import "./main.css"
 import { useState } from "react";
 import { CircleCheck } from 'lucide-react';
+import Typewriter from 'typewriter-effect';
+
 function Main(){
     const [inpValue,setInpValue]=useState('');
     const [todo,setTodo]=useState([]);
@@ -31,7 +33,16 @@ function Main(){
 
     return(
         <div className="main-wrapper">
+             
             <div className="main-subwrapper">
+            <div className="head">
+            <Typewriter
+                   options={{
+                    strings: ['Productivity',"Creativity","Efficiency"],
+                    autoStart: true,
+                    loop:true
+                   }} />
+            </div>
                 <form  onSubmit={handleSubmit}>
                     <input type="text" placeholder="Enter your task" onChange={handleInput}required></input>
                     <button type="submit">Add</button>
