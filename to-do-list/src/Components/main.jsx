@@ -5,8 +5,7 @@ import { CircleCheck } from 'lucide-react';
 function Main(){
     const [inpValue,setInpValue]=useState('');
     const [todo,setTodo]=useState([]);
-    var obj;
-    var index=-1;
+   
     const handleInput=(e)=>{
         e.preventDefault();
         setInpValue(e.target.value);
