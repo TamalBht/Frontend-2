@@ -137,8 +137,12 @@ li button{
 @media (max-width:768px) {
   .main-subwrapper{
     width: 85%;
+    height: 85vh;
   }
   li{
     left:-5rem;
+  }
+  ul{
+    width: 70%;
   }
 }
