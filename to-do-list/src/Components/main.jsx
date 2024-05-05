@@ -1,8 +1,7 @@
 import React from "react";
 import "./main.css"
 import { useState } from "react";
-import Addd from "./Add.js";
-import ReactDOM from 'react-dom';
+import { CircleCheck } from 'lucide-react';
 function Main(){
     const [inpValue,setInpValue]=useState('');
     const [todo,setTodo]=useState([]);
@@ -21,11 +20,13 @@ function Main(){
         e.target.reset();
      
     };
-    function Addtask(valuee){
     
-        return(
-            <div className="toDoInput">{valuee}</div>
-        );
+    const handleComplete=()=>{
+        const tickk= document.querySelector('.tick');
+        tickk.classList.add("complete");
+        
+      
+
     }
 
     return(
@@ -38,7 +39,7 @@ function Main(){
                 <ul>
                     {todo.map((inpValue,index)=>(
                         <li key={index}>
-                            <button></button><span>{inpValue}</span>
+                            <button onClick={handleComplete}><CircleCheck className="tick"/></button><span id={index}>{inpValue}</span>
                         </li>
                     ))}
                 </ul>

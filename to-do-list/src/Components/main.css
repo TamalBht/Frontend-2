@@ -73,9 +73,25 @@ form button{
 ul{
   align-self: center;
   position: relative;
-  background-color: aqua;
+  /* background-color: aqua; */
   left:-10rem;
 }
 li{
   list-style: none;
+}
+.tick{
+  height: 20px;
+  position: relative;
+  top:2px
+}
+li button{
+  background: transparent;
+  border: none;
+}
+.complete{
+  background-color: green;
+  border-radius: 100px;
+}
+.complete-text{
+  text-decoration: line-through;
 }
