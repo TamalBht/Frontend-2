@@ -14,16 +14,17 @@ function Main(){
     const handleSubmit=(e)=>{
         e.preventDefault();
         console.log(inpValue);
-        setTodo([...todo,inpValue]); 
+        setTodo([...todo, { text: inpValue, completed: false }]); 
         console.log(todo);
-        index=index+1;
+        
         e.target.reset();
      
     };
     
-    const handleComplete=()=>{
-        const tickk= document.querySelector('.tick');
-        tickk.classList.add("complete");
+    const handleComplete=(index)=>{
+        const newTodo = todo.slice();
+        newTodo[index].completed = !newTodo[index].completed;
+        setTodo(newTodo);
         
       
 
@@ -37,10 +38,13 @@ function Main(){
                     <button type="submit">Add</button>
                 </form>
                 <ul>
-                    {todo.map((inpValue,index)=>(
-                        <li key={index}>
-                            <button onClick={handleComplete}><CircleCheck className="tick"/></button><span id={index}>{inpValue}</span>
-                        </li>
+                    {todo.map((task,index)=>(
+                         <li key={index} className={task.completed ? "completed-task" : ""}>
+                         <button onClick={() => handleComplete(index)}>
+                             <CircleCheck className={task.completed ? "complete" : ""} />
+                         </button>
+                         <span className={task.completed ? "complete-text" : ""}>{task.text}</span>
+                     </li>
                     ))}
                 </ul>
             </div>

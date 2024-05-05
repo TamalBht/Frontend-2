@@ -28,6 +28,7 @@
     background-position: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
     
     
     
@@ -73,15 +74,41 @@ form button{
 ul{
   align-self: center;
   position: relative;
+  box-shadow: 3px 3px 3px #a6a6a6;
+  border: none;
+  border-left: 3px solid #ffffff;
+  border-top: 3px solid #ffffff;
+  border-radius: 30px;
   /* background-color: aqua; */
+  width:50%;
   left:-10rem;
+  height: 80%;
+  margin-left: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
 }
 li{
   list-style: none;
+  position: relative;
+  left:-10rem;
+  font-size: 1.5rem;
+  font-family: Roboto;
+  padding-top: 10px;
+  text-shadow: 3px 3px 3px #a6a6a6;
+  
+  width: 10%;
+  display: flex;
+  align-items: center;
+  transition: all ease-in-out 150ms;
+
 }
 .tick{
   height: 20px;
   position: relative;
+  transition: all ease-in-out 150ms;
+
   top:2px
 }
 li button{
@@ -89,9 +116,22 @@ li button{
   border: none;
 }
 .complete{
-  background-color: green;
+  background-color: rgb(50, 150, 50);
   border-radius: 100px;
+  transition: all ease-in-out 150ms;
+
 }
 .complete-text{
   text-decoration: line-through;
+  color: #a6a6a6;
+  text-shadow: none;
+  transition: all ease-in-out 150ms;
+}
+@media (max-width:768px) {
+  .main-subwrapper{
+    width: 85%;
+  }
+  li{
+    left:-5rem;
+  }
 }
