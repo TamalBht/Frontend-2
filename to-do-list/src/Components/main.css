@@ -1,6 +1,6 @@
 @font-face {
   font-family: Roboto;
-  src: url(./RobotoSlab-VariableFont_wght.ttf);
+  src: url(./Montserrat-Italic-VariableFont_wght.ttf);
 }
 
 .main-wrapper{
@@ -144,6 +144,6 @@ li button{
   }
   ul{
     width: 70%;
-    
+
   }
 }
