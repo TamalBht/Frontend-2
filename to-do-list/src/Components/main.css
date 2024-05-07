@@ -69,7 +69,8 @@ form button{
   border: none;
   border-left: 3px solid #ffffff;
   border-top: 3px solid #ffffff;
-  font-family: Oswald;
+  font-family: Roboto;
+  font-weight: 700;
 }
 ul{
   align-self: center;
