@@ -7,7 +7,6 @@ import { Info } from 'lucide-react';
 
 function Wrapper(){
     const Key = process.env.REACT_APP_NASA_API_KEY;
-    console.log(process.env.REACT_APP_NASA_API_KEY);
 
     useEffect(()=>{
       async function fetchAPIData(){
