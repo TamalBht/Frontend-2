@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import"./wrapper.css";
 import apod from "./apod.jpg"
 import Footer from "./Footer";
@@ -6,24 +6,29 @@ import { Info } from 'lucide-react';
 
 
 function Wrapper(){
-    const Key = process.env.REACT_APP_NASA_API_KEY;
+    const [data,setData]= useState(null);
+    const [loading,setLoading]=useState(false);
 
     useEffect(()=>{
       async function fetchAPIData(){
-        const Key = process.env.REACT_APP_NASA_API_KEY;
-        console.log(Key);
+        
+        const API_Key="oVMWv9Gqk3dkbTkhwylwNldBZ08vkzd8TSUgFnej";
+        
 
-        // const url= 'https://api.nasa.gov/planetary/apod'+`?api_key=${Key}`
-        // try{
-        //     const res =await fetch(url)
-        //     const data = await res.json();
-        //     console.log("Data\n",data);
-        // }catch(err){
-        //     console.log(err.message)
-        // }
+        const url= 'https://api.nasa.gov/planetary/apod'+`?api_key=${API_Key}`
+        try{
+            const res =await fetch(url)
+            const api_data = await res.json();
+            setData(api_data);
+            console.log("Data\n",api_data);
+        }catch(err){
+            console.log(err.message)
+        }
       }
       fetchAPIData ()
     },[])
+    console.log(data);
+    const api_url=`${data.url}`
     return(
         <>
             
