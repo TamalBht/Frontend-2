@@ -27,9 +27,9 @@ function Wrapper(){
       }
       fetchAPIData ()
     },[])
-    console.log(data);
+    console.log("Data Stored\n",data);
+
     
-    const api_url=`${data.url}`
     return(
         <>
             
