@@ -39,8 +39,8 @@ function Wrapper(){
             <img src={data===null?apod:data.hdurl} alt="space"></img>
            </div>
            <div className="info-bar">
-            <button><Info className="info-log"/></button>
-            <Footer/>
+            <button><Info className="info-logo"/></button>
+            <Footer props={data===null?"abcd":data.explanation}/>
         </div>
            
         </div>
