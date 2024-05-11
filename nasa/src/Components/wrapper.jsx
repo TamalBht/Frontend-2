@@ -40,7 +40,7 @@ function Wrapper(){
            </div>
            <div className="info-bar">
             <button><Info className="info-logo"/></button>
-            <Footer props={data===null?"abcd":data.explanation}/>
+            <Footer data={data}/>
         </div>
            
         </div>
