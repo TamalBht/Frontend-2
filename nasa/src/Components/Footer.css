@@ -21,6 +21,7 @@ footer p{
     font-family: mont;
     color: #fff;
     background: linear-gradient(to bottom, transparent,#171120);
+    backdrop-filter: blur(17px);
     box-shadow: 3px 3px 5px #ff83cdcc;
     font-size: 1.2rem;
     padding:20px;
@@ -35,4 +36,7 @@ footer p{
         text-shadow: 4px 4px 5px #ff83cd;
 
     }
+}
+footer{
+    position: fixed;    
 }

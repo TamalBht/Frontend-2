@@ -8,6 +8,20 @@ body {
   overflow-x: hidden;
   user-select: none;
   background: #171120;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+  width: 13px;
+  background-color: transparent;
+  left:10px;
+  position: relative;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #ff83cd;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+  width:20px;
 }
 
 
