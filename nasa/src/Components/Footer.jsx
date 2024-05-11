@@ -7,7 +7,7 @@ function Footer(props){
         <footer>
             <h1>{data?.title}</h1>
             <p>{data?.explanation}</p>
-            By <a href="https://tamal-bht-github-io.vercel.app/" target="_blank"rel="noreferrer">Tamal Bhattacharjee</a>
+            <span>By <a href="https://tamal-bht-github-io.vercel.app/" target="_blank"rel="noreferrer">Tamal Bhattacharjee</a></span>
         </footer>
     );
 }
