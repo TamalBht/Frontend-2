@@ -1,0 +1,9 @@
+@font-face {
+    font-family: space;
+    src: url(./Chopsic-K6Dp.ttf);
+}
+footer h1{
+    color:#fff;
+    font-family: space;
+    letter-spacing: 2px;
+}

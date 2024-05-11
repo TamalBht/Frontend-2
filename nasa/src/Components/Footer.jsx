@@ -1,4 +1,5 @@
 import React from "react";
+import "./Footer.css"
 function Footer(props){
     const des = "ergsr";
     const {data}=props
