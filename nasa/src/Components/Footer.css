@@ -41,3 +41,32 @@ footer{
     position: fixed;  
     top: 20vh;  
 }
+@media (max-width:768px) {
+    footer{
+        position: relative;
+        top:32vh;
+        flex-direction: column;
+        align-items: end;
+        justify-content: space-between;
+        justify-items: flex-end;
+        height:100vh;
+    }
+    footer p{
+        width: 90%;
+        font-size: 1rem;
+    }
+}
+@media (max-width:426px) {
+    footer h1{
+        font-size: 1.8rem;
+    }
+    footer p{
+        
+        position: relative;
+    }
+}
+@media (max-width:376px) {
+    footer{
+        top:10vh
+    }
+}
