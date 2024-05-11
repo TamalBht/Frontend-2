@@ -38,5 +38,6 @@ footer p{
     }
 }
 footer{
-    position: fixed;    
+    position: fixed;  
+    top: 20vh;  
 }
