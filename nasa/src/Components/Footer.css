@@ -69,4 +69,11 @@ footer{
     footer{
         top:10vh
     }
+    footer h1{
+        font-size: 1.8rem;
+    }
+    footer p{
+        width: 80%;
+
+    }
 }
