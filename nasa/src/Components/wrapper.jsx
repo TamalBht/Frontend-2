@@ -29,13 +29,14 @@ function Wrapper(){
     },[])
     console.log("Data Stored\n",data);
 
+
     
     return(
         <>
             
             <div className="wrapper">
            <div className="img-bg">
-            <img src={apod} alt="space"></img>
+            <img src={data===null?apod:data.hdurl} alt="space"></img>
            </div>
            <div className="info-bar">
             <button><Info className="info-log"/></button>
