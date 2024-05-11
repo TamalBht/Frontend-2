@@ -1,9 +1,38 @@
 @font-face {
     font-family: space;
-    src: url(./Chopsic-K6Dp.ttf);
+    src: url(./MegatransdemoRegular-8M9B0.otf);
+}
+@font-face {
+    font-family: mont;
+    src: url(./Montserrat-VariableFont_wght.ttf);
 }
 footer h1{
     color:#fff;
     font-family: space;
     letter-spacing: 2px;
+    text-shadow: 4px 4px 5px #8bbae9;
+    font-size: 4.5rem;
+    animation-name: glow;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+footer p{
+    width:50%;
+    font-family: mont;
+    color: #fff;
+    background: linear-gradient(to bottom, transparent,#171120);
+    box-shadow: 3px 3px 5px #ff83cdcc;
+    font-size: 1.2rem;
+    padding:20px;
+    border-radius:10px;
+}
+@keyframes glow {
+    0%,100% {
+        text-shadow: 4px 4px 5px #8bbae9;
+
+    }
+    50% {
+        text-shadow: 4px 4px 5px #ff83cd;
+
+    }
 }

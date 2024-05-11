@@ -17,6 +17,6 @@
 }
 .info-bar{
     position: absolute;
-    inset: 40% 30%;
+    inset: 20% 5%;
     display: flex;
 }
