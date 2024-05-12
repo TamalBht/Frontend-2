@@ -46,7 +46,7 @@ function Wrapper(){
            
         </div>
        ):<div className="loader">
-            <h1><Rocket className="rock"></Rocket>Loading</h1>
+            <h1><Rocket className="rock"></Rocket><span className="loaderName">Loading</span></h1>
         </div>}
         </>
     );
