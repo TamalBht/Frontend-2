@@ -23,7 +23,7 @@ footer p{
     background: linear-gradient(to bottom, transparent,#171120);
     backdrop-filter: blur(17px);
     box-shadow: 7px 7px 7px #ff83cdcc;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding:20px;
     border-radius:10px;
 }
@@ -40,7 +40,7 @@ footer p{
 footer{
     position: fixed;  
     top: 15vh; 
-     
+
 }
 footer span{
     color:#8bbae9;
