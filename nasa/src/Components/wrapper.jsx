@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import"./wrapper.css";
-import apod from "./apod.jpg"
+import planet from "./planet.svg"
 import Footer from "./Footer";
 import { Info } from 'lucide-react';
+import {Rocket} from 'lucide-react'
 
 
 function Wrapper(){
@@ -25,7 +26,7 @@ function Wrapper(){
             console.log(err.message)
         }
       }
-      fetchAPIData ()
+    //   fetchAPIData ()
     },[])
     console.log("Data Stored\n",data);
 
@@ -34,17 +35,19 @@ function Wrapper(){
     return(
         <>
             
-            <div className="wrapper">
+           {data!==null?( <div className="wrapper">
            <div className="img-bg">
-            <img src={data===null?apod:data.hdurl} alt="space"></img>
+            <img src={data.hdurl} alt="space"></img>
            </div>
            <div className="info-bar">
             
-            <Footer data={data}/>
+            {data!==null?(<Footer data={data}/>):<div className="loader"></div>}
         </div>
            
         </div>
-       
+       ):<div className="loader">
+            <h1><Rocket className="rock"></Rocket>Loading</h1>
+        </div>}
         </>
     );
 }
