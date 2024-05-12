@@ -26,7 +26,7 @@ function Wrapper(){
             console.log(err.message)
         }
       }
-    //   fetchAPIData ()
+      fetchAPIData ()
     },[])
     console.log("Data Stored\n",data);
 
@@ -46,7 +46,7 @@ function Wrapper(){
            
         </div>
        ):<div className="loader">
-            <h1><Rocket className="rock"></Rocket><span className="loaderName">Loading</span></h1>
+            <h1><Rocket size={40} className="rock"></Rocket><span className="loaderName">Loading</span></h1>
         </div>}
         </>
     );
