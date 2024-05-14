@@ -1,4 +1,5 @@
 import React from "react";
+import { disablePageScroll,enablePageScroll } from "scroll-lock";
 import { useLocation } from "react-router-dom";
 import {brainwave} from "../assets"
 import {navigation} from "../constants/index"
@@ -11,11 +12,18 @@ const Header =()=>{
     const [openNavigation,setOpenNavigation]=useState(false);
     const toggleNavigation = ()=>{
         if(openNavigation){
-            setOpenNavigation(false)
+            setOpenNavigation(false);
+            enablePageScroll();
         }
         else{
-            setOpenNavigation(true)
+            setOpenNavigation(true);
+            disablePageScroll();
         }
+    };
+    const handleClick =()=>{
+        if(!openNavigation) return;
+        enablePageScroll()
+        setOpenNavigation(false);
     }
     return(
     <div className={`fixed top-0 left-0 w-full z-50 bg-n-8/90  border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${openNavigation ?'bg-n-8':'bg-n-8/90 backdrop-blur-sm'}`}>
@@ -26,7 +34,9 @@ const Header =()=>{
         <nav className={` fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auti lg:bg-transparent ${openNavigation ? "flex":"hidden"} `}>
             <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
                 {navigation.map((item) =>(
-                   <a key={item.id} href={item.url} className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${item.onlyMobile? "lg-hidden":""} px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${item.url===pathName.hash?'z-2 lg:text-n-1':"lg: text-n-1/50"} lg:leading-5 lg:hover:text-n-1 xl:px-12` }>
+                   <a key={item.id} href={item.url}
+                   onClick={handleClick} 
+                   className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${item.onlyMobile? "lg-hidden":""} px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${item.url===pathName.hash?'z-2 lg:text-n-1':"lg: text-n-1/50"} lg:leading-5 lg:hover:text-n-1 xl:px-12` }>
                     {item.title}
                    </a> 
                 ))}
@@ -34,10 +44,12 @@ const Header =()=>{
             <HamburgerMenu/>
 
         </nav>
-        <a href="#signup" className="button hidden mr-8  text-n-1/50 transition-colors hover:text-n-1 lg:block">
+            <div className="flex flex-directio:row-reverse items-end justify-right">
+            <a href="#signup" className="float-right relative  button hidden mr-8  text-n-1/50 transition-colors hover:text-n-1 lg:block">
                 New Account
-        </a>
-        <Button className="hidden lg:flex " href="#login">SignIn</Button>
+            </a>
+            <Button className="hidden lg:flex float-right" href="#login">SignIn</Button>
+            </div>
         </div>
         <Button className={"ml-auto lg:hidden float-right -top-15 mr-5"} px="px-3" onClick={toggleNavigation}>
             <MenuSvg openNavigation={openNavigation}/>
