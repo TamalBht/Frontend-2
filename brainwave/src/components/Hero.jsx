@@ -1,14 +1,14 @@
 import React from 'react'
 import Section from './Section'
-import { curve } from '../assets';
+import { curve, heroBackground, robot } from '../assets';
 import Button from './Button';
 
 const Hero = () => {
   return (
-    <Section className="pt-[12rem] mt-[8.25rem] " crosses crossesOffset="lg:translate-y-[5.25rem]" customPadding id="#hero">
+    <Section className="pt-[12rem] mt-[8.25rem] overflow-hidden " crosses crossesOffset="lg:translate-y-[5.25rem]" customPadding id="#hero">
         <div className='container relative'>
             <div className='relative z-1 max-w-[32rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[6rem]'>
-               <h1 className='h1 mb-6'>
+               <h1 className='h1 mb-6 mt-5 lg:mb-6'>
                 Explore the Possibilities of AI Chatting with BrainwaveCurve
                 <span className='inline-block relative'>Brainwave{" "}<img src={curve} className='absolute top-full left-0 w-full xl:mt-2' width={624} height={28} alt='curve'/></span>
                 </h1>
@@ -19,6 +19,21 @@ const Hero = () => {
                     Get Started
                 </Button>
                 
+            </div>
+            <div className='relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24'>
+                <div className='relative z-1 p-0.5 rounded-2xl bg-conic-gradient'>
+                    <div className='relative bg-n-8 rounded-2xl'>
+                        <div className='h-[1.4rem] bg-n-10 rounded-t-[0.9rem]'/>
+                        <div className='aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[668/490] lg:aspect-[1024/490]'>
+                            <img src={robot} className='w-full'  
+                            alt='robot' width={1024} height={490}/>
+                        </div>
+                    </div>
+
+                </div>
+                <div className='absolute overflow-hidden -top-[54%] left-1/2 w-[234%] -translate-x-1/2' >
+                    <img src={heroBackground} className='w-full overflow-hidden' width={1440} height={1800}/>
+                </div>
             </div>
         </div>
     </Section>
