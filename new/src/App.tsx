@@ -1,3 +1,4 @@
+import { MatrixRainingLetters } from "react-mdr";
 
 import './App.css'
 function App() {
@@ -5,7 +6,7 @@ function App() {
   return (
     <>
       <div>
-        hello world
+        <MatrixRainingLetters/>
       </div>
      
     </>
