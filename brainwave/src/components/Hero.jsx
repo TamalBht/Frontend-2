@@ -6,7 +6,7 @@ import {BackgroundCircles , Gradient , BottomLine} from "./design/Hero"
 import {heroIcons} from '../constants'
 import { ScrollParallax } from 'react-just-parallax';
 import Generating from './Generating';
-
+import Notification from './Notification';
 const Hero = () => {
   const parallaxRef=useRef(null)
     return (
@@ -32,7 +32,8 @@ const Hero = () => {
                         <div className='aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[668/490] lg:aspect-[1024/490]'>
                             <img src={robot} className='w-full scale-1.7 translate-y-[-8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]'  
                             alt='robot' width={1024} height={490}/>
-                            <Generating className="absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2"/>
+                            <ScrollParallax isAbsolutelyPositioned>
+                            <Generating className="absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2"/></ScrollParallax>
                             <ScrollParallax isAbsolutelyPositioned>
                                 <ul className='hidden absolute -left-[-5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl xl:flex'>
                                 {heroIcons.map((icon,index)=>(
@@ -41,6 +42,9 @@ const Hero = () => {
                                     </li>
                                 ))}
                                 </ul>
+                            </ScrollParallax>
+                            <ScrollParallax isAbsolutelyPositioned>
+                                <Notification className="hidden absolute -right-[5.5rem] w-[18rem] xl:flex xl:mt-[10rem]" title="Code generation"/>
                             </ScrollParallax>
                         </div>
                     </div>
