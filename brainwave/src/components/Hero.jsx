@@ -18,7 +18,7 @@ const Hero = () => {
                     <span className='inline-block relative'>Brainwave{" "}<img src={curve} className='absolute top-full left-0 w-full xl:mt-2' width={624} height={28} alt='curve'/></span>
                 </h1>
                 <p className='body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8'>
-                    Unleash he power of AI wihin Brainwave. Upgrade your productivity with Brainwave, the open AI chat app
+                    Unleash the power of AI within Brainwave. Upgrade your productivity with Brainwave, the open AI chat app
                 </p> 
                 <Button href="/pricing" white>
                     Get Started
